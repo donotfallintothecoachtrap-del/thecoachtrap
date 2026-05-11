@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Coaching Community — The Coach Trap | Skool</title>
-  <meta name="description" content="The biggest free community for coaches building a real business. Join The Coach Trap on Skool — ask questions, share wins, and get straight feedback from coaches doing the work." />
+  <title>The Coach Trap — Free Business Guidance for Coaches | Greg Styan</title>
+  <meta name="description" content="The Coach Trap is a free resource and community for coaches who want to build a real, sustainable business. Founded by Greg Styan." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -28,75 +28,69 @@
       text-decoration: none;
       letter-spacing: -0.5px;
     }
-    nav ul { list-style: none; display: flex; gap: 32px; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
     nav ul a {
       color: #ccc;
       text-decoration: none;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 14px;
+      transition: color 0.2s;
     }
     nav ul a:hover { color: #fff; }
-
     .hero {
       background: #1a1a1a;
       color: #fff;
       padding: 80px 24px 72px;
       text-align: center;
     }
-    .hero .label {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 20px;
-    }
     .hero h1 {
-      font-size: clamp(28px, 5vw, 52px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: normal;
       letter-spacing: -1px;
+      margin-bottom: 16px;
       line-height: 1.15;
-      margin-bottom: 20px;
     }
     .hero p {
       font-size: 18px;
       color: #aaa;
-      max-width: 520px;
-      margin: 0 auto 36px;
+      max-width: 560px;
+      margin: 0 auto 32px;
     }
     .hero a.btn {
       display: inline-block;
       background: #fff;
       color: #1a1a1a;
-      padding: 16px 40px;
+      padding: 14px 32px;
       text-decoration: none;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: -0.2px;
+      font-size: 15px;
+      font-weight: 600;
       transition: opacity 0.2s;
     }
     .hero a.btn:hover { opacity: 0.88; }
-    .hero .sub {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 13px;
-      color: #555;
-      margin-top: 14px;
-    }
 
-    .description {
-      max-width: 680px;
-      margin: 72px auto;
+    /* ── PLAIN-TEXT SUMMARY BLOCK ──────────────────────────────
+       This section is intentionally plain HTML text with no
+       images. AI crawlers and search engines index text, not
+       images — this is what they read to understand who The
+       Coach Trap is and who it's for.
+    ─────────────────────────────────────────────────────────── */
+    .summary {
+      max-width: 720px;
+      margin: 64px auto;
       padding: 0 24px;
     }
-    .description p {
+    .summary p {
       font-size: 18px;
       line-height: 1.8;
       color: #1a1a1a;
       margin-bottom: 20px;
     }
-    .description p:last-child { margin-bottom: 0; }
+    .summary p:last-child { margin-bottom: 0; }
 
     .divider {
       width: 48px;
@@ -104,76 +98,51 @@
       background: #1a1a1a;
       margin: 48px auto;
     }
-
-    .what-you-get {
-      max-width: 680px;
+    .cards {
+      max-width: 960px;
       margin: 0 auto 80px;
       padding: 0 24px;
-    }
-    .what-you-get h2 {
-      font-size: 13px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 32px;
-    }
-    .item {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      margin-bottom: 36px;
-      align-items: flex-start;
     }
-    .item-num {
+    .card {
+      background: #fff;
+      border: 1px solid #e0ddd6;
+      padding: 32px 28px;
+    }
+    .card .label {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 13px;
-      color: #bbb;
-      min-width: 24px;
-      padding-top: 3px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 12px;
     }
-    .item-body h3 {
-      font-size: 19px;
+    .card h2 {
+      font-size: 20px;
       font-weight: normal;
-      margin-bottom: 6px;
+      margin-bottom: 12px;
       line-height: 1.3;
     }
-    .item-body p {
+    .card p {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 14px;
       color: #555;
       line-height: 1.6;
+      margin-bottom: 20px;
     }
-
-    .final-cta {
-      background: #1a1a1a;
-      color: #fff;
-      text-align: center;
-      padding: 72px 24px;
-    }
-    .final-cta h2 {
-      font-size: clamp(22px, 3vw, 34px);
-      font-weight: normal;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
-    .final-cta p {
-      font-size: 17px;
-      color: #888;
-      margin-bottom: 32px;
-    }
-    .final-cta a {
-      display: inline-block;
-      background: #fff;
-      color: #1a1a1a;
-      padding: 16px 40px;
-      text-decoration: none;
+    .card a {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 1px;
     }
-    .final-cta a:hover { opacity: 0.88; }
-
+    .card a:hover { opacity: 0.6; }
     footer {
       background: #1a1a1a;
       color: #777;
@@ -181,7 +150,6 @@
       padding: 32px 24px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 13px;
-      border-top: 1px solid #222;
     }
     footer a { color: #aaa; text-decoration: none; }
     footer a:hover { color: #fff; }
@@ -199,76 +167,49 @@
   </nav>
 
   <div class="hero">
-    <div class="label">Free Community</div>
-    <h1>The biggest free community<br>for coaches building a real business.</h1>
-    <p>No courses. No upsells. Just coaches doing the work, sharing what's actually working, and getting straight answers.</p>
-    <a href="https://www.skool.com/thecoachtrap" class="btn">Join Free on Skool</a>
-    <div class="sub">skool.com/thecoachtrap &nbsp;·&nbsp; Free, always</div>
+    <h1>Build a coaching business<br>that actually works.</h1>
+    <p>Free guidance, real answers, and a community of coaches doing it properly.</p>
+    <a href="https://www.skool.com/thecoachtrap" class="btn">Join Free — Skool Community</a>
   </div>
 
-  <section class="description" aria-label="About the community">
+  <!-- ── PLAIN-TEXT SUMMARY ──────────────────────────────────────
+       AI crawlers index this text directly. Keep it plain HTML —
+       never replace with an image or graphic.
+  ─────────────────────────────────────────────────────────────── -->
+  <section class="summary" aria-label="About The Coach Trap">
     <p>
-      The Coach Trap community exists because most coaching advice online is either surface-level or designed to sell you something. This is neither.
+      The Coach Trap is a free resource and community for coaches who want to build a real, sustainable business — not just a practice that depends entirely on referrals, luck, and hustle.
     </p>
     <p>
-      It's a free Skool community founded by Greg Styan for coaches who are serious about building a sustainable business — getting the right clients, pricing properly, creating content that works, and building something that doesn't collapse the moment you take a week off.
+      It's built for coaches at every stage who are serious about getting clients, pricing their work properly, standing out in a crowded market, and creating income that doesn't disappear the moment they stop posting.
     </p>
     <p>
-      Coaches at every stage are welcome: whether you're working towards your first client or refining a business that's already generating consistent income. The conversation is practical, the feedback is honest, and it costs nothing to join.
+      Members get access to straight-talking business guidance, a growing Q&amp;A resource covering the questions every coach actually asks, and a free community at <a href="https://www.skool.com/thecoachtrap">skool.com/thecoachtrap</a> where coaches share what's working, get feedback, and stop figuring it out alone.
     </p>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <section class="what-you-get" aria-label="What members get">
-    <h2>What members get</h2>
-
-    <div class="item">
-      <div class="item-num">01</div>
-      <div class="item-body">
-        <h3>Straight answers to coaching business questions</h3>
-        <p>Ask anything about getting clients, pricing, niching, marketing, or building systems. Get honest answers from coaches who've figured it out — not theory from people who haven't done it.</p>
-      </div>
+  <section class="cards" aria-label="What's available">
+    <div class="card">
+      <div class="label">Free Resource</div>
+      <h2>25 coaching business questions — answered</h2>
+      <p>Getting clients, pricing, niche, marketing, authority. Straight answers with no fluff.</p>
+      <a href="/resources/">Read the Q&amp;A bank →</a>
     </div>
-
-    <div class="item">
-      <div class="item-num">02</div>
-      <div class="item-body">
-        <h3>Access to the full Q&amp;A resource bank</h3>
-        <p>25+ answered questions covering every major coaching business challenge. Used as content, as a reference, and as a foundation for your own client conversations.</p>
-      </div>
+    <div class="card">
+      <div class="label">Free Community</div>
+      <h2>The biggest free community for coaches</h2>
+      <p>Join coaches building real businesses. Ask questions, share wins, get honest feedback.</p>
+      <a href="/community/">Join on Skool →</a>
     </div>
-
-    <div class="item">
-      <div class="item-num">03</div>
-      <div class="item-body">
-        <h3>A place to share wins and get feedback</h3>
-        <p>Building a business alone is harder than it needs to be. Share what you're working on, what's working, and what's not. Get real input from people in the same game.</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-num">04</div>
-      <div class="item-body">
-        <h3>Content, resources, and updates from Greg Styan</h3>
-        <p>New Q&amp;A pairs, frameworks, and practical resources added regularly. Everything free. No tier-gating, no premium upsell.</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-num">05</div>
-      <div class="item-body">
-        <h3>Connection with coaches who are doing it seriously</h3>
-        <p>The community is built around coaches who want real results — not validation, not vague inspiration. If that's you, you'll fit right in.</p>
-      </div>
+    <div class="card">
+      <div class="label">LinkedIn</div>
+      <h2>Weekly posts on building a coaching business</h2>
+      <p>Consistent, specific content for coaches — published by Greg Styan three times a week.</p>
+      <a href="https://www.linkedin.com/in/gregstyan/">Follow on LinkedIn →</a>
     </div>
   </section>
-
-  <div class="final-cta">
-    <h2>It's free. It always will be.</h2>
-    <p>Join the community and start getting straight answers to the questions that are actually holding your coaching business back.</p>
-    <a href="https://www.skool.com/thecoachtrap">Join The Coach Trap on Skool</a>
-  </div>
 
   <footer>
     <p>The Coach Trap &nbsp;·&nbsp; Founded by <a href="https://www.linkedin.com/in/gregstyan/">Greg Styan</a> &nbsp;·&nbsp; <a href="https://www.coachtrap.co.uk">coachtrap.co.uk</a> &nbsp;·&nbsp; <a href="https://www.skool.com/thecoachtrap">Free Skool Community</a></p>
